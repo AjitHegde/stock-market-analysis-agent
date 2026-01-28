@@ -1,0 +1,29 @@
+services:
+  stock-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: stock-market-ai-agent
+    ports:
+      - "8501:8501"
+    environment:
+      # API Keys - Set these in .env file
+      - NEWS_API_KEY=${NEWS_API_KEY}
+      - ALPHA_VANTAGE_API_KEY=${ALPHA_VANTAGE_API_KEY}
+      - TWITTER_API_KEY=${TWITTER_API_KEY}
+      - REDDIT_API_KEY=${REDDIT_API_KEY}
+      - FINNHUB_API_KEY=${FINNHUB_API_KEY}
+      # Authentication
+      - AUTH_USERNAME=${AUTH_USERNAME:-admin}
+      - AUTH_PASSWORD=${AUTH_PASSWORD:-changeme}
+      - AUTH_PASSWORD_HASH=${AUTH_PASSWORD_HASH}
+    volumes:
+      # Mount data directory for persistence
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

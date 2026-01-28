@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+"""
+Stock Market AI Agent - Main entry point
+"""
+
+from src.cli import cli
+
+if __name__ == '__main__':
+    cli()

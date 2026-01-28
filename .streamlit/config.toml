@@ -1,0 +1,25 @@
+[server]
+# Disable development mode features
+headless = true
+runOnSave = false
+enableCORS = false
+enableXsrfProtection = true
+
+[browser]
+# Disable usage stats collection
+gatherUsageStats = false
+# Don't show the "Stop" button
+serverAddress = "0.0.0.0"
+serverPort = 8501
+
+[client]
+# Hide the hamburger menu and footer
+showErrorDetails = false
+toolbarMode = "minimal"
+
+[theme]
+# Optional: Customize theme
+primaryColor = "#1f77b4"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+textColor = "#262730"
