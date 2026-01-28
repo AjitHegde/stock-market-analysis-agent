@@ -340,6 +340,27 @@ This is a personal project. Feel free to fork and modify for your own use.
 
 ## Deployment
 
+### 🚀 Streamlit Community Cloud (Recommended - FREE!)
+
+Deploy to Streamlit Cloud for **completely free** hosting with automatic HTTPS!
+
+- **Cost**: FREE (no credit card required)
+- **Performance**: 25-30 second analysis
+- **Setup Time**: 2 minutes
+- **URL**: Get your own `yourapp.streamlit.app` subdomain
+- **Always-on**: No cold starts (sleeps after 7 days of inactivity)
+
+**Quick Deploy:**
+1. Go to https://share.streamlit.io/
+2. Sign in with GitHub
+3. Click "New app"
+4. Select repository: `AjitHegde/stock-market-analysis-agent`
+5. Main file: `src/web_ui.py`
+6. Add your API keys in Settings → Secrets
+7. Deploy! ✅
+
+See [STREAMLIT_CLOUD_DEPLOYMENT.md](STREAMLIT_CLOUD_DEPLOYMENT.md) for detailed instructions.
+
 ### Docker Deployment
 
 The application is fully containerized and ready for deployment.
@@ -360,7 +381,7 @@ docker-compose up -d --build
 
 See [DOCKER_QUICKSTART.md](DOCKER_QUICKSTART.md) for detailed Docker instructions.
 
-#### AWS Lightsail Deployment (Recommended)
+#### AWS Lightsail Deployment
 
 Deploy to AWS Lightsail for fast, consistent performance:
 
@@ -392,13 +413,14 @@ See [AWS_CLI_DEPLOYMENT.md](AWS_CLI_DEPLOYMENT.md) for AWS CLI guide or [LIGHTSA
 
 | Option | Cost | Response Time | Setup Complexity | Best For |
 |--------|------|---------------|------------------|----------|
+| **Streamlit Cloud** | ✅ FREE | 25-30s | ⭐ Easiest | Public apps, demos, sharing |
 | **Local** | Free | 25-30s | Easy | Development/Testing |
 | **Docker Local** | Free | 25-30s | Easy | Testing Production Setup |
-| **AWS Lightsail** | $10/mo | 25-30s | Medium | Personal Production Use |
-| **AWS Lambda** | $2-20/mo | 40-50s | Hard | Occasional Use |
-| **Streamlit Cloud** | Free | 30-40s | Easy | Public Demo (Security Risk) |
+| **AWS Lightsail** | $10/mo | 25-30s | Medium | Private production use |
+| **Render.com** | Free/$7/mo | 30-40s | Easy | Alternative to Streamlit |
+| **Railway.app** | $5 credit | 25-30s | Easy | Quick deploys |
 
-**Recommendation**: Use AWS Lightsail for the best balance of cost, performance, and reliability.
+**Recommendation**: Use **Streamlit Cloud** for free public hosting, or **AWS Lightsail** if you need private deployment with full control.
 
 ## Acknowledgments
 

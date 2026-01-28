@@ -35,6 +35,9 @@ ENV/
 # Environment variables
 .env
 
+# Streamlit secrets (use Streamlit Cloud dashboard instead)
+.streamlit/secrets.toml
+
 # Configuration
 config.json
 
